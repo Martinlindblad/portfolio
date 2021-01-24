@@ -1,0 +1,36 @@
+.exp-container {
+    width: 60%;
+    margin: 0 auto;
+    .exp-info-container {
+        
+        .exp-info {
+            width: 32%;
+            height: 450px;
+            background-color: #060B10;
+            margin: 2%;
+            p{
+                padding: 20px;
+                text-align: center;
+            }
+            .exp-btn {
+                    display:block;
+                    border-style:solid;
+                    border-color:#bbb #888 #666 #aaa;
+                    border-width:3px 4px 4px 3px;
+                    width:9em;
+                    height:2em;
+                    background:#ccc;
+                    color:#333;
+                    line-height:2;
+                    text-align:center;
+                    text-decoration:none;
+                    font-weight:900;
+                &:hover{
+                    border-color: #666 #aaa #bbb #888;
+                    border-width:4px 3px 3px 4px;
+                    color:#000;
+                }
+            }
+        }
+    }
+}

@@ -1,22 +1,22 @@
 const router = require('express').Router();
-const Profile = require("../models/profile.model");
+const Experience = require("../models/experience.model");
 
 router.route('/').get((req, res) => {
-  Profile.find()
+  Experience.find()
       .then(prof => res.json(prof))
       .catch(error => res.status(400).json('Error: ' + error));
 });
 
 router.route('/add').post((req, res) => {
-  const profileSend = req.body.name;
+  const expSend = req.body.name;
   const years = req.body.age;
 
-  const newProfileValue = new Profile({ profileSend, years });
+  const newExpValue = new Experience({ expSend, years });
 
-  newProfileValue.save()
-      .then(() => res.json('New Profile value added!' + `${newProfileValue} ${years} ${profileSend}`))
+  newExpValue.save()
+      .then(() => res.json('New Exp value added!' + `${newExpValue} ${years} ${expSend}`))
       .catch(error => res.status(400).json('Error: ' + error));
-}); 
+});
 
 
 module.exports = router;

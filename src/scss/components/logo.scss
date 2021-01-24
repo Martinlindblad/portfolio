@@ -1,0 +1,36 @@
+.svg {
+    width: 5vw;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+  }
+  
+  .svg .path {
+    fill: transparent;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 0;
+    -webkit-animation: dash 10s ease-out;
+            animation: dash 10s ease-out;
+    background-color: transparent;
+  }
+  
+  @-webkit-keyframes dash {
+    from {
+      stroke-dashoffset: 3000;
+    }
+    to {
+      stroke-dashoffset: 0;
+      fill: #FEFCD7;
+    }
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 3000;
+    }
+    to {
+      stroke-dashoffset: 0;
+      fill: #FEFCD7;
+    }
+  }
+  /*# sourceMappingURL=logo.module.css.map */

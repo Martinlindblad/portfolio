@@ -1,10 +1,14 @@
-import Front from './pages/main'
-import './App.css';
-
+import Profile from './components/profile'
+import Experience from './components/experience'
+import './scss/standard/App.scss';
+import Japan from './components/japan';
+ 
 function App() {
   return (
     <div className="App">
-      <Front />
+      <Profile />
+      <Experience />
+      <Japan />
     </div>
   );
 }

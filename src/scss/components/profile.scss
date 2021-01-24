@@ -1,0 +1,42 @@
+.profile-container {
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(-70deg, #313e46, #19293a, #28343b 100.71%);
+    background: linear-gradient(-70deg, #0a0d0f, #07121d, #0a0d0f 100.71%);
+    .front-img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        right: 0%;
+        opacity: 0.6;
+        height: 100%;
+        width: 80%;
+    }
+
+    .name {
+        position: absolute;
+        left: 200px;
+        top: 250px;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    .container-about {
+        height: 40vh;
+        width: 40vw;
+        margin: 0 auto;
+        z-index: 2;
+        position: relative;
+        top: 450px;
+        left: 100px;
+
+        .pitch {
+            p {
+                line-height: 2rem;
+            }
+        }
+    }
+}
