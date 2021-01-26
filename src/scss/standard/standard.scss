@@ -1,16 +1,32 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fefcd7;
+    z-index: 10;
+}
+
+h1 {
+    color: #fefcd7;
+    font-family: "Rock Salt", cursive;
+    font-size: 60px;
     margin: 0;
-    color: #FEFCD7;
+    
 }
 
 p {
-    color: #FEFCD7;
-    font-size: 14px;
-    line-height: 1rem;
+    z-index: 10;
+    font-size: 18px;
+    line-height: 2rem;
     text-align: left;
+    color: #fefcd7;
+    
 }
 
 a {
+    z-index: 20;
     text-decoration: none;
-    color: #FEFCD7;
+    color: #fefcd7;
 }

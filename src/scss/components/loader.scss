@@ -1,11 +1,12 @@
-.svg-logo {
-  width: 3vw;
-  position: relative;
-  margin: 0 auto;
-  display: block;
+.svg {
+  width: 5vw;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  height: 20vh;
 }
 
-.svg-logo .path {
+.svg .path {
   fill: #fefcd7;
   stroke-dasharray: 2800;
   stroke-dashoffset: 0;

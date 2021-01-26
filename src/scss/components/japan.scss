@@ -50,7 +50,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 100vw;
+        width: 90vw;
 
         .japanese-info {
             display: flex;
@@ -59,6 +59,7 @@
             flex-wrap: wrap;
             transform: translateY(0) translateX(0);
             transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-left: 4%;
 
             // [data-inviewanimation].infoItem {
             //     // transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -67,9 +68,10 @@
             //     height: 0;
             // }
             .info-item {
-                width: calc(100% / 3 - 10vw);
-                margin: 5% 3%;
-                padding: 2%;
+                width: calc(100% / 3 - 2vw);
+                margin: 4% 0%;
+                padding: 1%;
+                padding-bottom: 2%;
                 margin-bottom: 0%;
                 position: relative;
                 min-height: 250px;

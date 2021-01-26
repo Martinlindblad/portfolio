@@ -4,6 +4,20 @@
     position: relative;
     background: linear-gradient(-70deg, #313e46, #19293a, #28343b 100.71%);
     background: linear-gradient(-70deg, #0a0d0f, #07121d, #0a0d0f 100.71%);
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 0;
+        content: "";
+        background-color: #33333338;
+        background-color: #00000000;
+      }
+
     .front-img {
         background-position: center;
         background-repeat: no-repeat;
@@ -16,22 +30,21 @@
         width: 80%;
     }
 
-    .name {
-        position: absolute;
-        left: 200px;
-        top: 250px;
-        border: 1px solid white;
-        border-radius: 50%;
-        padding: 10px;
-    }
     .container-about {
-        height: 40vh;
-        width: 40vw;
+        width: 35vw;
+        height: 100vh;
         margin: 0 auto;
+        margin-left: 15%;
         z-index: 2;
         position: relative;
-        top: 450px;
-        left: 100px;
+        h2 {
+            background-color: #fefcd7;
+            color: #07121C;
+            width: 250px;
+            height: 30px;
+            padding: 10px;
+            text-align: center;
+        }
 
         .pitch {
             p {

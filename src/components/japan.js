@@ -27,10 +27,7 @@ class Japan extends Component {
     }
   };
 
-
   render() {
-
-
     return (
       <section className="japan-container">
         <div id="Japanese" className="japan">

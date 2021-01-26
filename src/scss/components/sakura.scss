@@ -8,7 +8,7 @@
     z-index: -1;
 
 
-    @for $i from 1 through 60 {
+    @for $i from 1 through 80 {
         .sakura-leaf:nth-of-type(#{$i})  {
             background: #ffb7c5;
             position: absolute;

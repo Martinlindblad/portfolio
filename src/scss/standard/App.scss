@@ -1,21 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 .App {
   // background: #0f0c29;
   // background: linear-gradient(-70deg, #313e46, #19293a, #28343b 100.71%);
   // background: linear-gradient(-70deg, #0a0d0f, #07121d, #0a0d0f 100.71%);
+  background-color: #0a0a0c;
   min-height: 100vh;
   position: relative;
-  &::after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 0;
-    content: "";
-    background-color: #00000049;
-  }
+  z-index: 1;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .App-logo {

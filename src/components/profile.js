@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Logo from '../components/logo'
 import '../scss/components/profile.scss';
 import profilePic from '../media/me.png'
 
@@ -29,14 +28,13 @@ export default class Profile extends Component {
         return (
             <section className="profile-container">
                 <div className="front-img" style={{ backgroundImage: `url(${profilePic})` }}></div>
-                <Logo />
                 {this.state.profileInfo.map((profiles, i) => {
                     return (
                         <div key={i}>
-                            <h1 className="name">{`${profiles.info.firstname} ${profiles.info.lastname}`}</h1>
                             <div className="container-about f j-c d-c">
+                            <h1 className="name">{`${profiles.info.firstname} ${profiles.info.lastname}`}</h1>
                                 <h2>{profiles.about.title}</h2>
-                                <div className="pitch f j-sb d-r a-c">
+                                <div className="pitch f j-sb d-c a-c">
                                     <p>{profiles.about.pitch}</p>
                                     <p>{profiles.about.slogo + ' ' + profiles.contact.mail}</p>
                                 </div>
