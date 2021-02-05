@@ -6,6 +6,8 @@ import './scss/standard/App.scss';
 import Japan from './components/japan';
 import Loader from './components/loader';
 import Navbar from './components/navbar';
+import Contact from './components/contact';
+import Project from './components/projects';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Navbar /> 
         {/* <Route path="/" exact component={Loader}/> */}
         <Route path="/profile" exact component={Profile}/>
+        <Route path="/contact" exact component={Contact}/>
+        <Route path="/project" exact component={Project}/>
         <Route path="/experience" exact component={Experience}/>
         <Route path="/japan" exact component={Japan}/>
       </div>

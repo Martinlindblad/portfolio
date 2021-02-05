@@ -68,7 +68,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="f d-c j-sa a-c">
-                <Link to='/project' className="navbar-link navbar-link-up" onClick={this.resetActive}>Come in contact</Link>
+                <Link to='/contact' className="navbar-link navbar-link-up" onClick={this.resetActive}>Come in contact</Link>
                 <div className="navbar-center f j-sb d-c a-c">
 
                     <div class="arrow arrow--right">
@@ -79,7 +79,7 @@ class Navbar extends Component {
                         <span onClick={this.handlePrev}>Prev</span>
                     </div>
                 </div>
-                <Link to='/contact' className="navbar-link navbar-link-down" onClick={this.resetActive}>Check out my projects</Link>
+                <Link to='/project' className="navbar-link navbar-link-down" onClick={this.resetActive}>Check out my projects</Link>
             </nav>
         )
     }

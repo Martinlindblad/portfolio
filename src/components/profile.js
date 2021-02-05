@@ -46,35 +46,3 @@ export default class Profile extends Component {
         )
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useEffect, useState } from "react"
-
-// function Profile () {
-//     const [profile, setProfile] = useState([{
-//         prof: ''
-//     }]);
-
-//     useEffect(() => {
-//         fetch("/profile").then(res => {
-//             if(res.ok) {
-//                 return res.json();
-//             }
-//         }).then(jsonRes => setProfile(jsonRes));
-//     })
-
-//     return <div>
-//         <h1>{profile.prof}</h1>
-//     </div>
-// }
-
-// export default Profile;

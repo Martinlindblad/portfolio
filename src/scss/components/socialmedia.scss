@@ -1,0 +1,40 @@
+.socialmedia-container {
+    text-align: left;
+    text-transform: capitalize;
+    margin: 0% auto;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    
+    .instagram {
+        background: -webkit-linear-gradient(#fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .linkedin {
+        background: linear-gradient(120deg, #0080ffc7, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .facebook {
+        background: linear-gradient(10deg, #0D8CF0, #FFFFFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .github {
+        background: linear-gradient(120deg, #24292E, #FFFFFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    a, p {
+        color:  #fefcd7;
+        margin: 2%;
+        font-weight: 700;
+        text-align: left;
+    }
+    p {
+        min-width: 20px;
+        margin: 0 auto;
+        font-size: 25px;
+    }
+}
