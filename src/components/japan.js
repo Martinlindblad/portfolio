@@ -37,7 +37,7 @@ class Japan extends Component {
               {this.state.japanInfo.map((data, i) => {
                 return (
                   i === 0 ?
-                    <div className="japan-content">
+                    <div key={i} className="japan-content">
                       <h2>{data.title}</h2>
                       <p>{data.content}</p>
                     </div>
@@ -48,7 +48,7 @@ class Japan extends Component {
                 {this.state.japanInfo.map((data, i) => {
                   return (
                     i > 0 ?
-                      <div className="info-item">
+                      <div key={i} className="info-item">
                         <h3>{data.title}</h3>
                         <p>{data.content}</p>
                       </div>

@@ -71,11 +71,11 @@ class Navbar extends Component {
                 <Link to='/contact' className="navbar-link navbar-link-up" onClick={this.resetActive}>Come in contact</Link>
                 <div className="navbar-center f j-sb d-c a-c">
 
-                    <div class="arrow arrow--right">
+                    <div className="arrow arrow--right">
                         <span onClick={this.handleNext}>Next</span>
                     </div>
                     <Link to='/profile' className="navbar-home" onClick={this.resetActive}><Logo /></Link>
-                    <div class="arrow arrow--left">
+                    <div className="arrow arrow--left">
                         <span onClick={this.handlePrev}>Prev</span>
                     </div>
                 </div>

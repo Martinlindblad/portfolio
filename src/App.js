@@ -4,7 +4,7 @@ import Profile from './components/profile'
 import Experience from './components/experience'
 import './scss/standard/App.scss';
 import Japan from './components/japan';
-import Loader from './components/loader';
+// import Loader from './components/loader';
 import Navbar from './components/navbar';
 import Contact from './components/contact';
 import Project from './components/projects';
