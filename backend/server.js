@@ -6,8 +6,12 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+var corsOptions = {
+  origin: ['http://localhost:3000', 'https://martinlindblad.com'],
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'] };
+app.use(cors(corsOptions));
 
-app.use(cors());
 app.use(express.json());
 
 

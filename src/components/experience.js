@@ -15,7 +15,7 @@ export default class Experience extends Component {
      
     getExp = async () => {
         try {
-            const resp = await axios.get('https://www.martinlindblad.com/experience')
+            const resp = await axios.get('http://localhost:5000/experience')
             this.setState({ expInfo: resp.data });
         } catch (err) {
             // Handle Error Here
