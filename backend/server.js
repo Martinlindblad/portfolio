@@ -7,9 +7,18 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: 'https://www.martinlindblad.com/'
-}));
+const whitelist = ['https://www.martinlindblad.com', 'http://localhost/3000']
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  credentials: true,
+}
+
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
@@ -23,9 +32,9 @@ const profileRouter = require('./routes/profile');
 const japanRouter = require('./routes/japan');
 const experienceRouter = require('./routes/experience');
 
-app.use('/profile', profileRouter);
-app.use('/japan', japanRouter);
-app.use('/experience', experienceRouter);
+app.use('/profile', cors(corsOptions), profileRouter);
+app.use('/japan', cors(corsOptions), japanRouter);
+app.use('/experience', cors(corsOptions), experienceRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
