@@ -22,11 +22,6 @@ const profileRouter = require('./routes/profile');
 const japanRouter = require('./routes/japan');
 const experienceRouter = require('./routes/experience');
 
-app.all('/*', function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
 app.use('/profile', profileRouter);
 app.use('/japan', japanRouter);
 app.use('/experience', experienceRouter);

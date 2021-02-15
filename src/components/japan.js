@@ -18,7 +18,7 @@ class Japan extends Component {
 
   getJapan = async () => {
     try {
-      const resp = await axios.get('http://localhost:5000/japan')
+      const resp = await axios.get('http://www.martinlindblad.com/japan')
       this.setState({ japanInfo: resp.data });
       console.log(resp.data);
     } catch (err) {
