@@ -6,18 +6,19 @@ require('dotenv').config();
 
 var https = require('https');
 var fs = require('fs');
-var privateKey  = fs.readFileSync('server.key', 'utf8');
+var privateKey = fs.readFileSync('server.key', 'utf8');
 var certificate = fs.readFileSync('server.cert', 'utf8');
-var credentials = {key: privateKey, cert: certificate};
+var credentials = { key: privateKey, cert: certificate };
 
 const app = express();
 const port = process.env.PORT || 5000;
 var corsOptions = {
-  origin: [/.*localhost.*/, 'https://martinlindblad.com'],
+  origin: ['https://localhost:3000', 'https://martinlindblad.com'],
   credentials: true,
-  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'] };
+  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
+};
 
-  
+
 app.use(cors(corsOptions));
 
 app.use(express.json());
