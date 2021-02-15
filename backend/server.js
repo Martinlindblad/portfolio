@@ -6,16 +6,8 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-var corsOptions = {
-  origin: ['http://localhost:3000', 'https://martinlindblad.com', 'https://martinlindblad.com/profile', 
-  'https://martinlindblad.com/contact', 'https://martinlindblad.com/japan', 'https://martinlindblad.com/experience'
-],
-  credentials: true,
-  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
-};
 
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
