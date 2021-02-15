@@ -5,9 +5,9 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 var https = require('https');
-var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
-var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
-
+var fs = require('fs');
+var privateKey  = fs.readFileSync('server.key', 'utf8');
+var certificate = fs.readFileSync('server.cert', 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 
 const app = express();
