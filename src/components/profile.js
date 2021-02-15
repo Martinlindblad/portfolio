@@ -16,7 +16,7 @@ export default class Profile extends Component {
 
     getProfile = async () => {
         try {
-            const resp = await axios.get('https://martinlindblad.com/profile');
+            const resp = await axios.get('https://mlindblad-portfolio.herokuapp.com/profile');
             this.setState({ profileInfo: resp.data });
         } catch (err) {
             // Handle Error Here

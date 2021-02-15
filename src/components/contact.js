@@ -20,7 +20,7 @@ export default class Contact extends Component {
 
     getContact = async () => {
         try {
-            const resp = await axios.get('https://martinlindblad.com/profile');
+            const resp = await axios.get('https://mlindblad-portfolio.herokuapp.com/profile');
             const contact = resp.data[0].contact;
             const socialmedia = resp.data[0].socialmedia;
             this.setState({
