@@ -20,7 +20,7 @@ export default class Contact extends Component {
 
     getContact = async () => {
         try {
-            const resp = await axios.get('http://www.martinlindblad.com/contact');
+            const resp = await axios.get('https://www.martinlindblad.com/contact');
             const contact = resp.data[0].contact;
             const socialmedia = resp.data[0].socialmedia;
             this.setState({

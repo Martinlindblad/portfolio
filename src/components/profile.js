@@ -16,7 +16,7 @@ export default class Profile extends Component {
 
     getProfile = async () => {
         try {
-            const resp = await axios.get('http://www.martinlindblad.com/profile');
+            const resp = await axios.get('https://www.martinlindblad.com/profile');
             this.setState({ profileInfo: resp.data });
         } catch (err) {
             // Handle Error Here
