@@ -11,17 +11,22 @@ const port = process.env.PORT || 5000;
 //   credentials: true,
 //   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
 // };
-const corsOptions = {
-  origin: "*",
-  methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
-}
+
 var https = require('https');
 var fs = require('fs');
 var privateKey = fs.readFileSync('server.key', 'utf8');
 var certificate = fs.readFileSync('server.cert', 'utf8');
 var credentials = { key: privateKey, cert: certificate };
 
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    allowedHeaders: ["authorization", "Content-Type"], // you can change the headers
+    exposedHeaders: ["authorization"], // you can change the headers
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false
+  })
+);
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
