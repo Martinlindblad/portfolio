@@ -15,10 +15,10 @@ var corsOptions = {
 };
 
 var https = require('https');
-var fs = require('fs');
-var privateKey = fs.readFileSync('server.key', 'utf8');
-var certificate = fs.readFileSync('server.cert', 'utf8');
-var credentials = { key: privateKey, cert: certificate };
+// var fs = require('fs');
+// var privateKey = fs.readFileSync('server.key', 'utf8');
+// var certificate = fs.readFileSync('server.cert', 'utf8');
+// var credentials = { key: privateKey, cert: certificate };
 
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -38,8 +38,8 @@ app.use('/profile', profileRouter);
 app.use('/japan', japanRouter);
 app.use('/experience', experienceRouter);
 
-var httpsServer = https.createServer(credentials, app);
-httpsServer.listen(port, () => {
+// var httpsServer = https.createServer(credentials, app);
+app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 

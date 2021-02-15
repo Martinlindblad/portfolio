@@ -4,7 +4,7 @@ import Profile from './components/profile'
 import Experience from './components/experience'
 import './scss/standard/App.scss';
 import Japan from './components/japan';
-// import Loader from './components/loader';
+import Loader from './components/loader';
 import Navbar from './components/navbar';
 import Contact from './components/contact';
 // import Project from './components/projects';
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar /> 
-        {/* <Route path="/" exact component={Loader}/> */}
+        <Route path="/" exact component={Loader}/>
         <Route path="/profile" exact component={Profile}/>
         <Route path="/contact" exact component={Contact}/>
         {/* <Route path="/project" exact component={Project}/> */}
