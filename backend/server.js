@@ -4,12 +4,20 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
+var https = require('https');
+var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
+var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+
+var credentials = {key: privateKey, cert: certificate};
+
 const app = express();
 const port = process.env.PORT || 5000;
 var corsOptions = {
   origin: ['https://localhost:3000', 'https://martinlindblad.com'],
   credentials: true,
   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'] };
+
+  
 app.use(cors(corsOptions));
 
 app.use(express.json());
@@ -31,6 +39,7 @@ app.use('/profile', profileRouter);
 app.use('/japan', japanRouter);
 app.use('/experience', experienceRouter);
 
-app.listen(port, () => {
+var httpsServer = https.createServer(credentials, app);
+httpsServer.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
