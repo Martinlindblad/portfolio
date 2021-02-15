@@ -6,11 +6,13 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-// var corsOptions = {
-//   origin: ['http://localhost:3000', 'https://martinlindblad.com'],
-//   credentials: true,
-//   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
-// };
+var corsOptions = {
+  origin: ['http://localhost:3000', 'https://martinlindblad.com', 'https://martinlindblad.com/profile', 
+  'https://martinlindblad.com/contact', 'https://martinlindblad.com/japan', 'https://martinlindblad.com/experience'
+],
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
+};
 
 var https = require('https');
 var fs = require('fs');
@@ -18,22 +20,11 @@ var privateKey = fs.readFileSync('server.key', 'utf8');
 var certificate = fs.readFileSync('server.cert', 'utf8');
 var credentials = { key: privateKey, cert: certificate };
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 
-  'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-  );
-  if( req.method === 'OPTIONS'){
-    req.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-    return res.status(200).json({});
-  }
-  next();
-});
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true,  useUnifiedTopology: true }
-);
+mongoose.connect(uri, { useNewUrlParser: true,  useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
