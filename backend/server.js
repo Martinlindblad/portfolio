@@ -13,7 +13,7 @@ var credentials = {key: privateKey, cert: certificate};
 const app = express();
 const port = process.env.PORT || 5000;
 var corsOptions = {
-  origin: ['https://localhost:3000', 'https://martinlindblad.com'],
+  origin: [/.*localhost.*/, 'https://martinlindblad.com'],
   credentials: true,
   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'] };
 
