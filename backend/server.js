@@ -12,9 +12,8 @@ const port = process.env.PORT || 5000;
 //   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
 // };
 const corsOptions = {
-  "origin": "*",
-  "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
-  // other options
+  origin: "*",
+  methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
 }
 var https = require('https');
 var fs = require('fs');
