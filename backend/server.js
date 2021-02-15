@@ -6,26 +6,23 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-var corsOptions = {
-  origin: ['http://localhost:3000', 'https://martinlindblad.com'],
-  credentials: true,
-  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
-};
-var allowCrossDomain = function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'https://martinlindblad.com');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-
-  next();
+// var corsOptions = {
+//   origin: ['http://localhost:3000', 'https://martinlindblad.com'],
+//   credentials: true,
+//   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
+// };
+const corsOptions = {
+  "origin": "*",
+  "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
+  // other options
 }
-
 var https = require('https');
 var fs = require('fs');
 var privateKey = fs.readFileSync('server.key', 'utf8');
 var certificate = fs.readFileSync('server.cert', 'utf8');
 var credentials = { key: privateKey, cert: certificate };
 
-app.use(cors(allowCrossDomain));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
