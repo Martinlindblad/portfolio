@@ -5,7 +5,8 @@
     border-radius: 5px;
     position: relative;
     width: 100%;
-    
+    -webkit-animation: fadeEffect 3s;
+    animation: fadeEffect 3s;
     .instagram {
         background: -webkit-linear-gradient(#fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
         -webkit-background-clip: text;

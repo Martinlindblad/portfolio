@@ -5,7 +5,7 @@ class Loader extends Component {
 
     render() {
         return (
-            <div className="logoContainer">
+            <div className="loader-container">
 
                 <div>
                     <svg className="svg" id="svg" data-name="Layer 1" viewBox="0 0 237.01 221.31"><defs><style>.cls-1

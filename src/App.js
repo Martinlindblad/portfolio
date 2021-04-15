@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar /> 
-        <Route path="/" exact component={Loader}/>
+        <Route path="/" exact component={Profile}/>
         <Route path="/profile" exact component={Profile}/>
         <Route path="/contact" exact component={Contact}/>
         {/* <Route path="/project" exact component={Project}/> */}

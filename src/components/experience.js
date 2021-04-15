@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../scss/components/exp.scss';
+import cocacola from "../media/cocacola.jpg";
+import solberga from '../media/solberga.jpg';
+import gymnasium from '../media/gymnasium.jpg';
+import komvux from '../media/komvux.jpg';
+import nackademin from '../media/nackademin.jpg';
+const media = [nackademin, cocacola, komvux, gymnasium, solberga]
 
 export default class Experience extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { expInfo: [] };
+        this.state = { 
+            expInfo: [] ,
+        };
+        
     }
+
 
     componentDidMount() {
         this.getExp();
@@ -37,11 +47,11 @@ export default class Experience extends Component {
                         <div key={exp} className="f j-c a-c d-r exp-info-container wrap">
                             {allExp.map((exps, i) => {
                                 return (
-                                    <div key={i} className={`exp-info exp-info-${exps} f j-c d-c a-c`}>
+                                    <div key={i} className={`exp-info f j-c d-c a-c`}>
+                                        <div className="info-background" style={{ backgroundImage: `url(${media[i]})` }}></div>
                                         <h2>{exps.name}</h2>
                                         <p>{exps.duration}</p>
-                                        <p className="hidden">{exps.info}</p>
-                                        {/* <div className={`exp-btn exp-btn-${exps}`} onClick= "toggleBtn()"></div> */}
+                                        <p className="info">{exps.info}</p>
                                     </div>
                                 )
                             })}

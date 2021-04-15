@@ -46,13 +46,16 @@
             text-align: center;
             color: #fefcd7 #08111a;
             text-shadow: 2px 4px 10px #08111a;
+            -webkit-animation: fadeEffect 3s;
+            animation: fadeEffect 3s;
         }
         .contact {
             text-align: left;
             text-transform: capitalize;
             position: relative;
             width: 100%;
-
+            -webkit-animation: fadeEffect 3s;
+            animation: fadeEffect 3s;
             p {
                 color: #fefcd7;
                 padding: 0 5%;

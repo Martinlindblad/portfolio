@@ -58,3 +58,28 @@
     padding: 0;
     height: 0;
 }
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes leftFadeEffect {
+    from {opacity: 0; transform: translateX(-20px);}
+    to {opacity: 1;}
+}
+@keyframes leftFadeEffect {
+    from {opacity: 0; transform: translateX(-20px)}
+    to {opacity: 1;}
+}
+@-webkit-keyframes rightFadeEffect {
+    from {opacity: 0; transform: translateX(20px);}
+    to { opacity: 0.8;}
+}
+@keyframes rightFadeEffect {
+    from {opacity: 0; transform: translateX(20px)}
+    to { opacity: 0.8;}
+}
