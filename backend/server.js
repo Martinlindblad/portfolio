@@ -19,7 +19,6 @@ getConnection = async () => {
   try {
     await mongoose.connect(uri, { useNewUrlParser: true,  useUnifiedTopology: true });
   } catch (error) {
-    handleError(error);
     console.log(error)
   }
 };
