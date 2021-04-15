@@ -2,18 +2,5 @@
   // background: #0f0c29;
   // background: linear-gradient(-70deg, #313e46, #19293a, #28343b 100.71%);
   // background: linear-gradient(-70deg, #0a0d0f, #07121d, #0a0d0f 100.71%);
-  min-height: 100vh;
-  position: relative;
-  &::after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 0;
-    content: "";
-    background-color: #00000049;
-  }
+
 }

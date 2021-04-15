@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import '../scss/components/socialmedia.scss';
 
 export default class Socialmedia extends Component {
-
     constructor(props) {
         super(props);
     }
-
     componentDidMount() {
         console.log(this.props.socialmedia)
         const lol = this.props.socialmedia.map((media, i) => {
